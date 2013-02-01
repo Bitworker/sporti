@@ -1,0 +1,2 @@
+module ExternPagesHelper
+end
