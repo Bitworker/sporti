@@ -8,9 +8,14 @@
     = csrf_meta_tags
   %body{ :id => params[:controller].parameterize + "-controller" }
 
-    = render :template => "layouts/navigation"
+    = render :template => "layouts/top_navigation"
     - flash.each do |name, msg|
       = content_tag :div, msg, :class => "flash #{name}"
-    .main-content
-      = yield
-    = #render :template => "layouts/footer"
+    - if user_signed_in?
+      = render :template => "layouts/left_navigation"
+      .main-content
+        .content-box
+          = yield
+    - else
+      .main-content
+        = yield

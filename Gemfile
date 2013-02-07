@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-
+gem 'rack' , '1.4.1' # Because of "Server already started" error
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -13,7 +13,7 @@ gem 'haml'
 gem 'haml-rails' # Creates .haml files on rails generate
 
 # Image Uploading
-gem "rmagick"
+gem "rmagick", "2.13.1"
 gem "carrierwave"
 
 # Usermanagement
