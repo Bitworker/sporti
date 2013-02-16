@@ -13,9 +13,9 @@
       = content_tag :div, msg, :class => "flash #{name}"
     - if user_signed_in?
       = render :template => "layouts/left_navigation"
-      .main-content
+      .main-content-intern
         .content-box
           = yield
     - else
-      .main-content
+      .main-content-extern
         = yield
