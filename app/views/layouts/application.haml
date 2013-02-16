@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      Bitworker - #{yield(:title) || "Kein titel"}
+      mySport #{ yield(:title).present? ? "- #{yield(:title)}" : "" }
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -14,8 +14,10 @@
     - if user_signed_in?
       = render :template => "layouts/left_navigation"
       .main-content-intern
+        = render :template => "layouts/notifications"
         .content-box
           = yield
     - else
       .main-content-extern
+        = render :template => "layouts/notifications"
         = yield

@@ -1,5 +1,7 @@
 .top-nav
   - if user_signed_in?
+    = link_to "Konto", account_path(current_user)
+    |
     = link_to "Logout", destroy_user_session_path, :method => :delete
   - else
     = link_to "Registrieren", new_user_registration_path

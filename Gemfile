@@ -1,3 +1,6 @@
+# For production gem installation:
+# RAILS_GROUPS=production bundle
+
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
@@ -32,9 +35,7 @@ group :assets do
 end
 
 # JS Engine
-group :production do
-  gem 'therubyracer'
-end
+gem 'therubyracer'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

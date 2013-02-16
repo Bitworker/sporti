@@ -9,6 +9,8 @@ Sporti::Application.routes.draw do
   devise_for :users
   
   resources :dashboard
+  resources :members
+  resources :account
   resources :extern_pages
 
   match '' => 'extern_pages#show', :as => :root
