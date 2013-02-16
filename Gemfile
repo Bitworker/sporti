@@ -32,7 +32,9 @@ group :assets do
 end
 
 # JS Engine
-gem 'therubyracer'
+group :production do
+  gem 'therubyracer'
+end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
