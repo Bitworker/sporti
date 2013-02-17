@@ -9,8 +9,6 @@
   %body{ :id => params[:controller].parameterize + "-controller" }
 
     = render :template => "layouts/top_navigation"
-    - flash.each do |name, msg|
-      = content_tag :div, msg, :class => "flash #{name}"
     - if user_signed_in?
       = render :template => "layouts/left_navigation"
       .main-content-intern

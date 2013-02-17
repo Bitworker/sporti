@@ -16,3 +16,13 @@
 %b
   Nachname: 
 = @user.last_name
+
+%br
+%br
+%b
+  Avatar:
+%br
+- if @user.avatar_url(:normal).present? 
+  = image_tag @user.avatar_url(:normal)
+- else
+  = image_tag("default_avatar.jpg")

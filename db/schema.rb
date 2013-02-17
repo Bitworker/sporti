@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216190852) do
+ActiveRecord::Schema.define(:version => 20130217204848) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "avatar"
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

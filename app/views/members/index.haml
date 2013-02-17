@@ -1,8 +1,25 @@
 - title "Mitglieder"
 
-Mitglieder page
-%br
+%h2
+  Mitglieder page
 - @users.each do |user|
-  %br
-    %b 
-      = user.email
+  .avatar
+    - if user.avatar_url(:normal).present? 
+      = image_tag user.avatar_url(:normal)
+    - else
+      = image_tag("default_avatar.jpg")
+  .data
+    %b
+      Email:
+    = user.email
+    %br
+    %b
+      Vorname:
+    = user.first_name
+    %br
+    %b
+      Nachname
+    = user.last_name
+    
+  - unless user == @users.last
+    %hr
