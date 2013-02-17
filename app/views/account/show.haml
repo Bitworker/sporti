@@ -1,3 +1,18 @@
 - title "Konto"
 
 = link_to "ändern", edit_account_path
+
+%br
+%b
+  Email: 
+= @user.email
+
+%br
+%b
+  Vorname: 
+= @user.first_name
+
+%br
+%b
+  Nachname: 
+= @user.last_name

@@ -38,5 +38,17 @@
     color: #C77966
     &:visited
       color: #C77966
+  .active
+    background-color: #DDDDDD
+    background-image: -moz-linear-gradient(center top , #49515C, #333840)
+  .button
+    border-bottom: 1px solid black
+    border-top: 1px solid grey
+    font: 18px/16px
+    padding: 9px 0
+    text-align: center
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1)
+    width: 200px
     &:hover
-      color: #703030
+      @extend .active
+      cursor: pointer
