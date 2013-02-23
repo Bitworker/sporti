@@ -5,3 +5,9 @@
   = link_to members_path do    
     %ul.button{ :class => is_active_link?("members") }
       Mitglieder
+  = link_to calendar_path do    
+    %ul.button{ :class => is_active_link?("calendar") }
+      Kalender
+  = link_to events_path do    
+    %ul.button{ :class => is_active_link?("events") }
+      Events

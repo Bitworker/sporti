@@ -1,13 +1,12 @@
 class AccountController < ApplicationController
   before_filter :find_user,  :only => [:show, :edit, :update]
-
+  
   def show
   end
   
   def edit
   end
-
-
+  
   # PUT /pages/1
   # PUT /pages/1.json
   def update
@@ -29,5 +28,4 @@ class AccountController < ApplicationController
   def find_user
     @user = User.find(params[:id])
   end
-  
 end

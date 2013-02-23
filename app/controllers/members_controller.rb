@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   
   def index
   end
-
+  
   protected
   
   def find_users

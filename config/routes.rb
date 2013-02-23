@@ -8,13 +8,15 @@ Sporti::Application.routes.draw do
 
   devise_for :users
   
-  resources :dashboard
-  resources :members
   resources :account
+  resources :dashboard
   resources :extern_pages
+  resources :events
+  resources :members
 
-  match '' => 'extern_pages#show', :as => :root
-  root :to => 'extern_pages#show'
+  match 'calendar' => 'calendar#index',    :as => :calendar
+  match ''         => 'extern_pages#show', :as => :root
+
 
   match ':controller(/:action(/:id))(.:format)'
 
