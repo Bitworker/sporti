@@ -1,13 +1,16 @@
 .left-nav
-  = link_to dashboard_path(current_user) do
+  = link_to main_app.dashboard_path(current_user) do
     %ul.button{ :class => is_active_link?("dashboard") }
       Dashboard
-  = link_to members_path do    
+  = link_to main_app.members_path do    
     %ul.button{ :class => is_active_link?("members") }
       Mitglieder
-  = link_to calendar_path do    
+  = link_to main_app.calendar_path do    
     %ul.button{ :class => is_active_link?("calendar") }
       Kalender
-  = link_to events_path do    
+  = link_to main_app.events_path do    
     %ul.button{ :class => is_active_link?("events") }
       Events
+  = link_to forem.forums_path do    
+    %ul.button{ :class => is_active_link?("forums") }
+      Forum

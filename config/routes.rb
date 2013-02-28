@@ -1,14 +1,14 @@
 Sporti::Application.routes.draw do
-
+  
   devise_scope :user do
     get "sign_in",  :to => "devise/sessions#new"
     get "sign_up",  :to => "devise/registrations#new"
     get "sign_out", :to => "devise/sessions#destroy"
   end
-
-  devise_for :users
   
-  resources :account
+  devise_for :users
+    
+  resources :account  
   resources :dashboard
   resources :extern_pages
   resources :events
@@ -16,8 +16,9 @@ Sporti::Application.routes.draw do
 
   match 'calendar' => 'calendar#index',    :as => :calendar
   match ''         => 'extern_pages#show', :as => :root
-
-
+  
+  mount Forem::Engine, :at => "/"
+  
   match ':controller(/:action(/:id))(.:format)'
 
   # The priority is based upon order of creation:

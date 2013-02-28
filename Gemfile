@@ -15,6 +15,12 @@ gem 'mysql2'
 gem 'haml' 
 gem 'haml-rails' # Creates .haml files on rails generate
 
+# Forum engine
+gem 'forem', :git => "git://github.com/radar/forem.git"
+
+# Pagination
+gem 'kaminari', '0.13.0'
+
 # Image Uploading
 gem "rmagick", "2.13.1"
 gem "carrierwave"
