@@ -1,0 +1,30 @@
+%h1 Events
+%br
+
+- @events.each do |event|
+  .event-wrapper
+    %h2= event.title
+  
+    .event-description
+      = event.description
+
+    .event-info
+      %b
+        Beginnt am:
+      = event.starts_at.to_time.to_formatted_s(:short)
+      |
+      %b
+        Endet am:
+      = event.ends_at.to_time.to_formatted_s(:short)
+      |
+      %b
+        Ganztägig:
+      = event.all_day ? "Ja" : "Nein"
+    
+    .event-footer
+      = link_to 'Bearbeiten', edit_event_path(event)
+      = link_to 'Löschen', event, :confirm => 'Bist du sicher?', :method => :delete
+
+= link_to 'Events im Kalender ansehen', calendar_path
+%br
+= link_to 'Neues Event', new_event_path

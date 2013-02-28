@@ -70,10 +70,10 @@ var defaults = {
 		next: '&nbsp;&#9658;&nbsp;',
 		prevYear: '&nbsp;&lt;&lt;&nbsp;',
 		nextYear: '&nbsp;&gt;&gt;&nbsp;',
-		today: 'today',
-		month: 'month',
-		week: 'week',
-		day: 'day'
+		today: 'Heute',
+		month: 'Monat',
+		week: 'Woche',
+		day: 'Tag'
 	},
 	
 	// jquery-ui theming
@@ -1790,7 +1790,7 @@ function vborders(element) {
 
 
 function setMinHeight(element, height) {
-	height = '100px'; //(typeof height == 'number' ? height + 'px' : height);
+	height = (typeof height == 'number' ? height + 'px' : height);
 	element.each(function(i, _element) {
 		_element.style.cssText += ';min-height:' + height + ';_height:' + height;
 		// why can't we just use .css() ? i forget
@@ -2800,7 +2800,7 @@ function AgendaDayView(element, calendar) {
 
 setDefaults({
 	allDaySlot: true,
-	allDayText: 'all-day',
+	allDayText: 'Ganztägig',
 	firstHour: 6,
 	slotMinutes: 30,
 	defaultEventMinutes: 120,

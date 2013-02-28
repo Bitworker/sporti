@@ -13,7 +13,7 @@ $(document).ready(function() {
             right: 'month,agendaWeek,agendaDay'
         },
         defaultView: 'month',
-        height: 500,
+        height: 688,
         slotMinutes: 15,
         
         loading: function(bool){
@@ -31,7 +31,7 @@ $(document).ready(function() {
             ignoreTimezone: false
         }],
         
-        timeFormat: 'h:mm t{ - h:mm t} ',
+        timeFormat: 'H:mm{ - H:mm} ',
         dragOpacity: "0.5",
         
         //http://arshaw.com/fullcalendar/docs/event_ui/eventDrop/
@@ -47,6 +47,7 @@ $(document).ready(function() {
         // http://arshaw.com/fullcalendar/docs/mouse/eventClick/
         eventClick: function(event, jsEvent, view){
           // would like a lightbox here.
+
         },
 	});
 });
@@ -60,6 +61,6 @@ function updateEvent(the_event) {
                  description: the_event.description
                }
       },
-      function (reponse) { alert('successfully updated task.'); }
+      function (reponse) { alert('event wurde aktualisiert.'); }
     );
 };
