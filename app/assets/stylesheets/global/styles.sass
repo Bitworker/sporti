@@ -1,0 +1,36 @@
+body
+  background-color: $font-1
+  color: #333
+  font-family: verdana, arial, helvetica, sans-serif
+  font-size: 14px
+  line-height: 20px
+  margin: 0px
+
+.main-content
+  position: relative
+  top: 40px
+  padding-bottom: 10px
+  background-color: $font-1
+
+.main-content-intern
+  @extend .main-content
+  left: 200px
+  .content-box
+    width: 900px
+    min-height: 600px
+    margin: 15px
+    padding: 15px
+    background-color: white
+    box-shadow: 2px 2px 10px $darker-grey
+    color: $darker-grey
+  .flash
+    width: 910px
+    margin-left: 15px
+    margin-top: 15px
+
+.main-content-extern
+  @extend .main-content
+  left: 0px
+  .flash
+    width: 910px
+    margin: 15px auto 0

@@ -1,5 +1,3 @@
-// NAVIGATION
-
 .top-nav
   position: fixed
   top: 0px
@@ -8,22 +6,21 @@
   height: 20px
   padding: 10px
   text-align: right
-  background-color: #C77966
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#C77966, endColorstr=#703030)
-  background-image: -moz-linear-gradient(center top, #C77966, #703030)
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C77966), to(#703030))
-  border-bottom: 3px double #2F343B
+  background-color: $font-2
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=$font-2, endColorstr=$red)
+  background-image: -moz-linear-gradient(center top, $font-2, $red)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($font-2), to($red))
+  border-bottom: 3px double $darker-grey
   z-index: 1
   a
     font-weight: bold
     font-size: 16px
     text-decoration: none
-    color: #2F343B
+    color: $darker-grey
     &:visited
-      color: #2F343B
+      color: $darker-grey
     &:hover
       color: white
-
 
 .left-nav
   position: fixed
@@ -31,13 +28,13 @@
   left: 0px
   bottom: 0px
   width: 200px
-  background-color: #2F343B
-  color: #C77966
+  background-color: $darker-grey
+  color: $font-2
   a
     text-decoration: none  
-    color: #C77966
+    color: $font-2
     &:visited
-      color: #C77966
+      color: $font-2
   .active
     background-color: #DDDDDD
     background-image: -moz-linear-gradient(center top , #49515C, #333840)

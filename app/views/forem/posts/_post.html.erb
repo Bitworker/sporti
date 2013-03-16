@@ -3,9 +3,9 @@
 
   <div class='user'>
     <div class='username'>
-      <%= link_to_if Forem.user_profile_links, post.user, [main_app, post.user] %>
+      <%= current_user.first_name %>, <%= current_user.last_name %>
     </div>
-    <div class='icon'><%= forem_avatar(post.user, :size => 60) %></div>
+    <div class='icon'><%= image_tag current_user.avatar_url(:normal) %></div>
   </div>
 
   <div class='contents'>

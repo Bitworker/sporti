@@ -1,20 +1,7 @@
-$dark-red: #882111
-
-$light-bg1: #FFC272
-$mid-bg1: #E3A348
-$bar1-topbg: #eee
-$bar1-midbg: #E3A348
-$bar1-bottombg: #aaa
-$default-text: #121212
-$visited-text: #000000
-$darkbg: #333
-$darkbg-highlight: #222
-
-#forem-forums-controller
+#forem-forums-controller, #forem-topics-controller, #forem-categories-controller, #forem-posts-controller, #forem-admin-forums-controller,  #forem-admin-topics-controller, #forem-admin-posts-controller
   #forums
     .title
       font-size: 150%
-
   #forum
     position: relative
     .secondary-nav
@@ -25,7 +12,6 @@ $darkbg-highlight: #222
       font-style: oblique
     menu
       padding-left: 0
-
   #topic, #forum
     h2
       padding: .5em
@@ -33,7 +19,6 @@ $darkbg-highlight: #222
       -webkit-border-radius: 5px
       background-color: $light-bg1
       color: $dark-red
-      // margin: 0;
       a.reply
         margin-right: 1em
         font-weight: normal
@@ -45,9 +30,7 @@ $darkbg-highlight: #222
         text-decoration: none
         &:hover
           background-color: $light-bg1
-
   #posts
-    
     .even
       background-color: $light-bg1
     .odd
@@ -67,7 +50,7 @@ $darkbg-highlight: #222
         .username
           font-weight: bold
         .icon
-          background: transparent url(http://placekitten.com/50/50) no-repeat
+          background: transparent url(default_avatar.jpg) no-repeat 50px 50px
           width: 50px
           height: 50px
           display: inline-block
@@ -76,12 +59,13 @@ $darkbg-highlight: #222
           display: inline-block
       .contents
         margin-left: 160px
-        min-height: 100px
+        min-height: 155px
         border-left: 2px solid $mid-bg1
         padding: 0
-
+        p
+          padding-right: 115px
+          padding-left: 15px
         time
-          // padding: 5px;
           margin-bottom: 1em
           font-size: .7em
           line-height: 18px
@@ -90,7 +74,6 @@ $darkbg-highlight: #222
         &:hover .actions
           display: block
         .actions
-          // display: none;
           font-size: 1em
           font-weight: bold
           position: absolute
@@ -110,7 +93,6 @@ $darkbg-highlight: #222
               &:hover
                 background-color: $dark-red
                 color: $mid-bg1
-
   table.subdued
     width: 100%
     -webkit-border-radius: 5px
@@ -142,7 +124,6 @@ $darkbg-highlight: #222
       .posts-count, .views-count
         font-size: .8em
         width: 80px
-
   .pages
     .page
       display: inline-block
@@ -153,15 +134,13 @@ $darkbg-highlight: #222
       text-decoration: none
       &:hover
         text-decoration: underline
-
   .lock.icon
     width: 24px
     height: 24px
-    background: transparent url(/assets/forem/lock_icon.png) 0 0
+    background: transparent url(forem/lock_icon.png) 0 0
     display: inline-block
-
   .pin.icon
     width: 9px
     height: 15px
-    background: transparent url(/assets/forem/pin_icon.png) 0 0
+    background: transparent url(forem/pin_icon.png) 0 0
     display: inline-block
