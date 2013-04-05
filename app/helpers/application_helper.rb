@@ -9,3 +9,4 @@ module ApplicationHelper
     "active" if params[:controller][0..4] == controller_name[0..4]
   end
 end
+ss
