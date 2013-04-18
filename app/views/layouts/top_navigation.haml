@@ -1,9 +1,20 @@
 .top-nav
-  - if user_signed_in?
-    = link_to "Konto", main_app.account_path(current_user)
-    |
-    = link_to "Logout", main_app.destroy_user_session_path, :method => :delete
-  - else
-    = link_to "Registrieren", main_app.new_user_registration_path
-    |
-    = link_to "Platform Login", main_app.new_user_session_path
+  .centering
+    = link_to (signed_in? ? main_app.dashboard_path(current_user) : main_app.root_path), :class => 'logo' do
+      %p
+        mySportevents
+    - if user_signed_in?
+      = link_to main_app.destroy_user_session_path, :method => :delete, :class => 'submenu first' do
+        %p
+          Logout
+      = link_to main_app.account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
+        %p
+          Einstellungen
+    - else
+      = link_to main_app.new_user_session_path, :class => 'submenu first' do
+        %p
+          Login
+      = link_to main_app.new_user_registration_path, :class => 'submenu' do
+        %p
+          Registrieren
+          

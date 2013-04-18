@@ -19,3 +19,9 @@ $.ajaxSetup({
     xhr.setRequestHeader("Accept", "text/javascript");
   }
 });
+
+$(document).ready(function() {
+  submenu_amount = $('.sub-nav .centering a').size();
+  width = ((960 - ((submenu_amount * 100) + ((submenu_amount - 1) * 5))) / 2) - 10;
+  $('.sub-nav .centering').css('margin-left', width);
+});

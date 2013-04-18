@@ -1,51 +1,81 @@
 .top-nav
-  position: fixed
-  top: 0px
-  left: 0px
-  right: 0px
-  height: 20px
-  padding: 10px
-  text-align: right
-  background-color: $font-2
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=$font-2, endColorstr=$red)
-  background-image: -moz-linear-gradient(center top, $font-2, $red)
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($font-2), to($red))
-  border-bottom: 3px double $darker-grey
-  z-index: 1
-  a
-    font-weight: bold
-    font-size: 16px
-    text-decoration: none
-    color: $darker-grey
-    &:visited
-      color: $darker-grey
-    &:hover
-      color: white
+  height: 180px
+  width: 100%
+  background-color: $grey
+  border-bottom: 6px solid $light-blue
+  .centering
+    margin: auto
+    width: 960px
+    height: 180px
+    a
+      @include font-face('Berlin Sans FB Demi','BRLNSDB')
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.33)
+      background-color: $dark-grey
+      text-align: center
+      text-decoration: none
+      color: $light-blue
+      &:visited
+        color: $light-blue
+      &:hover
+        color: $light-blue
+    .active
+      background-color: $darkest-grey
+    .submenu.first
+      margin-right: 40px   
+    .submenu
+      height: 40px
+      width: 160px
+      margin-top: 125px
+      margin-right: 10px
+      float: right
+      border-radius: 5px
+      &:hover
+        background-color: $darkest-grey
+      p
+        font-size: 20px
+        padding-top: 9px
+    .logo
+      margin-left: 50px
+      width: 360px
+      height: 210px
+      float: left
+      border-radius: 0px 0px 5px 5px
+      &:hover
+        background-color: $darkest-grey
+      p
+        padding-top: 130px
+        font-size: 40px
 
-.left-nav
-  position: fixed
-  top: 40px
-  left: 0px
-  bottom: 0px
-  width: 200px
-  background-color: $darker-grey
-  color: $font-2
-  a
-    text-decoration: none  
-    color: $font-2
-    &:visited
-      color: $font-2
-  .active
-    background-color: #DDDDDD
-    background-image: -moz-linear-gradient(center top , #49515C, #333840)
-  .button
-    border-bottom: 1px solid black
-    border-top: 1px solid grey
-    font: 18px/16px
-    padding: 9px 0
-    text-align: center
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1)
-    width: 200px
-    &:hover
-      @extend .active
-      cursor: pointer
+.sub-nav
+  height: 40px
+  margin-top: 20px
+  background-color: $light-blue
+  color: $light-blue
+  .centering
+    a
+      @include font-face('Berlin Sans FB Demi','BRLNSDB')
+      text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.33)
+      background-color: $dark-grey
+      text-align: center
+      text-decoration: none
+      color: $light-blue
+      &:visited
+        color: $light-blue
+      &:hover
+        color: $light-blue
+    .active
+      background-color: $darkest-grey
+    .subsubmenu.first
+      margin-left: 10px   
+    .subsubmenu
+      height: 30px
+      width: 100px
+      margin-top: 5px
+      margin-left: 5px
+      float: left
+      border-radius: 5px
+      &:hover
+        background-color: $darkest-grey
+      p
+        font-size: 16px
+        padding-top: 4px

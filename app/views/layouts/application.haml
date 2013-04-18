@@ -10,12 +10,15 @@
     
     = render :template => "layouts/top_navigation"
     - if user_signed_in?
-      = render :template => "layouts/left_navigation"
       .main-content-intern
+        = render :template => "layouts/sub_navigation"
         = render :template => "layouts/notifications"
         .content-box
           = yield
+      = render :template => "layouts/footer"
     - else
       .main-content-extern
         = render :template => "layouts/notifications"
-        = yield
+        .content-box
+          = yield
+      = render :template => "layouts/footer"
