@@ -3,30 +3,28 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
-gem 'rack' , '1.4.1' # Because of "Server already started" error
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.2.13'
+gem 'rack', '1.4.5' # Because of "Server already started" error
 
 # Database
-gem 'mysql2'
+gem 'mysql2', '0.3.11'
 
 # Tempate engine
-gem 'haml' 
-gem 'haml-rails' # Creates .haml files on rails generate
+gem 'haml', '4.0.2'
+gem 'haml-rails', '0.4' # Creates .haml files on rails generate
 
 # Forum engine
-gem 'forem', :git => "git://github.com/radar/forem.git"
+gem 'forem', :git => 'git://github.com/radar/forem.git'
 
 # Pagination
 gem 'kaminari', '0.13.0'
 
 # Image Uploading
-gem "rmagick", "2.13.1"
-gem "carrierwave"
+gem 'rmagick', '2.13.1'
+gem 'carrierwave', '0.8.0'
 
 # Usermanagement
-gem "devise"
+gem 'devise', '2.2.3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,7 +39,7 @@ group :assets do
 end
 
 # JS Engine
-gem 'jquery-rails'
+gem 'jquery-rails', '2.2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
