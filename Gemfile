@@ -42,7 +42,8 @@ end
 gem 'jquery-rails', '2.2.1'
 
 # Debugging
-group :debuging do
+# bundle install --without  debug
+group :debug do
   gem "better_errors", '0.8.0'
   gem "binding_of_caller", '0.7.1'
 end
