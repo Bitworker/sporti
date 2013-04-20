@@ -41,6 +41,12 @@ end
 # JS Engine
 gem 'jquery-rails', '2.2.1'
 
+# Debugging
+group :debuging do
+  gem "better_errors", '0.8.0'
+  gem "binding_of_caller", '0.7.1'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
