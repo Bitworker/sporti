@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228142971) do
+ActiveRecord::Schema.define(:version => 20130508160742) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -118,6 +118,12 @@ ActiveRecord::Schema.define(:version => 20130228142971) do
   add_index "forem_views", ["user_id"], :name => "index_forem_views_on_user_id"
   add_index "forem_views", ["viewable_id"], :name => "index_forem_views_on_topic_id"
 
+  create_table "groups", :force => true do |t|
+    t.string   "auth_hash"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",               :null => false
     t.string   "first_name"
@@ -137,6 +143,7 @@ ActiveRecord::Schema.define(:version => 20130228142971) do
     t.boolean  "forem_admin",            :default => false
     t.string   "forem_state",            :default => "pending_review"
     t.boolean  "forem_auto_subscribe",   :default => false
+    t.integer  "group_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
