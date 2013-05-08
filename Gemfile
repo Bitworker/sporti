@@ -9,6 +9,7 @@ gem 'mysql2', '0.3.11'
 # Tempate engine
 gem 'haml', '4.0.2'
 gem 'haml-rails', '0.4' # Creates .haml files on rails generate
+gem "html2haml", '1.0.1'
 
 # Forum engine
 gem 'forem', :git => 'git://github.com/radar/forem.git'
