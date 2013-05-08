@@ -4,8 +4,8 @@
 @mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal)
   @font-face
   font-family: '#{$fontname}'
-  src: url('img/fonts/#{$filename}.eot')
-  src: url('img/fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), url('img/fonts/#{$filename}.woff') format('woff'), url('img/fonts/#{$filename}.ttf') format('truetype'), url('img/fonts/#{$filename}.svg##{$filename}') format('svg')
+  src: url('fonts/#{$filename}.eot')
+  src: url('fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), url('img/fonts/#{$filename}.woff') format('woff'), url('img/fonts/#{$filename}.ttf') format('truetype'), url('img/fonts/#{$filename}.svg##{$filename}') format('svg')
     //svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
 
   font-style: $fontstyle
