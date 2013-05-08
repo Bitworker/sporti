@@ -6,11 +6,12 @@ Sporti::Application.routes.draw do
     get "logout",   :to => "devise/sessions#destroy"
   end
   
-  devise_for :users   
-  resources :account  
+  devise_for :users, :controllers => {:registrations => "registrations"}
+  
+  resources :account
   resources :events
   resources :members
-
+  
   match 'dashboard'=> 'dashboard#index',   :as => :dashboard
   match 'galerie'  => 'galerie#index',     :as => :galerie
   match 'calendar' => 'calendar#index',    :as => :calendar
