@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     current_user
   end
   helper_method :forem_user
-
+  
   protect_from_forgery
   
   # Devise Login Logout Paths

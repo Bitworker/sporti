@@ -1,4 +1,5 @@
 class AccountController < ApplicationController
+  before_filter :authenticate_user!  
   before_filter :find_user,  :only => [:show, :edit, :update]
   
   def show
@@ -11,7 +12,7 @@ class AccountController < ApplicationController
   # PUT /pages/1.json
   def update
     @user = User.find(params[:id])
-
+    
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to account_path(@user), notice: 'Deine Kontoinformationen wurden gespeichert' }
