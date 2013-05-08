@@ -1,6 +1,3 @@
-# For production gem installation:
-# RAILS_GROUPS=production bundle
-
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
