@@ -13,6 +13,7 @@ Sporti::Application.routes.draw do
   resources :extern_pages
   resources :events
   resources :members
+  resources :galerie
 
   match 'calendar' => 'calendar#index',    :as => :calendar
   match ''         => 'extern_pages#show', :as => :root
