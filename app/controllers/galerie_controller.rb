@@ -1,6 +1,6 @@
 class GalerieController < ApplicationController
   before_filter :authenticate_user!
   
-  def show
+  def index
   end
 end

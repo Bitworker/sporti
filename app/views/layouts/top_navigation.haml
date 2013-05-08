@@ -1,6 +1,6 @@
 .top-nav
   .centering
-    = link_to (signed_in? ? main_app.dashboard_path(current_user) : main_app.root_path), :class => 'logo' do
+    = link_to (signed_in? ? main_app.dashboard_path : main_app.root_path), :class => 'logo' do
       %p
         mySportevents
     - if user_signed_in?

@@ -1,6 +1,6 @@
 .sub-nav
   .centering
-    = link_to main_app.dashboard_path(current_user), { :class => "subsubmenu first #{is_active_link?("dashboard")}" } do
+    = link_to main_app.dashboard_path, { :class => "subsubmenu first #{is_active_link?("dashboard")}" } do
       %p
         Dashboard
     = link_to main_app.members_path, :class => "subsubmenu #{is_active_link?("members")}" do
@@ -15,6 +15,6 @@
     = link_to forem.forums_path, :class => "subsubmenu #{is_active_link?("forem")}" do
       %p
         Forum
-    = link_to main_app.galerie_path(current_user), :class => "subsubmenu #{is_active_link?("galerie")}" do
+    = link_to main_app.galerie_path, :class => "subsubmenu #{is_active_link?("galerie")}" do
       %p
         Galerie
