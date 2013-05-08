@@ -4,7 +4,7 @@
   Mitglieder page
 - @users.each do |user|
   .avatar
-    - if user.avatar_url(:normal).present? 
+    - if user.avatar_url(:normal).present?
       = image_tag user.avatar_url(:normal)
     - else
       = image_tag("default_avatar_m.png")
