@@ -1,0 +1,4 @@
+%p
+  Willkommen #{@email}!
+%p Du kannst deine E-Mail mit folgendem link bestätigen:
+%p= link_to 'E-Mail bestätigen', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)
