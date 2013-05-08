@@ -5,7 +5,7 @@ module ApplicationHelper
   end
   
   def is_active_link?(controller_name)
-    # [0..4] Because of Forem subcontrollers
+    # [0..4] Because of "Forem" subcontrollers
     "active" if params[:controller][0..4] == controller_name[0..4]
   end
 end
