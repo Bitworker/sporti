@@ -1,7 +1,7 @@
-- title "Mitglieder"
+- title t('members.title.index')
 
 %h2
-  Mitglieder page
+  = t('members.header')
 - @users.each do |user|
   .avatar
     - if user.avatar_url(:normal).present?
@@ -10,15 +10,15 @@
       = image_tag("default_avatar_m.png")
   .data
     %b
-      Email:
+      = t('members.email')
     = user.email
     %br
     %b
-      Vorname:
+      = t('members.first_name')
     = user.first_name
     %br
     %b
-      Nachname
+      = t('members.last_name')
     = user.last_name
     
   - unless user == @users.last

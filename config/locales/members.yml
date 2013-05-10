@@ -1,0 +1,8 @@
+de:
+  members:
+    title:
+      index: 'Mitglieder'
+    header: 'Mitglieder'
+    email: 'E-Mail:'
+    first_name: 'Vorname:'
+    last_name: 'Nachname:'
