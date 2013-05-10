@@ -1,0 +1,4 @@
+de:
+  events:
+    created: 'Event wurde erfolgreich erstellt'
+    updated: 'Event wurde erfolgreich aktualisiert'

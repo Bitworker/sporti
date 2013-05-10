@@ -23,7 +23,7 @@ class RegistrationsController < Devise::RegistrationsController
         respond_with resource, :location => after_inactive_sign_up_path_for(resource)
       end
     else
-      resource.errors.add(:base, "Falsche Gruppen ID") if @group.blank?
+      resource.errors.add(:base, t('registrations.group_id.wrong_id')) if @group.blank?
       clean_up_passwords resource
       respond_with resource
     end

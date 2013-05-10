@@ -55,7 +55,7 @@ class EventsController < ApplicationController
     
     respond_to do |format|
       if @event.save
-        format.html { redirect_to(@event, :notice => 'Event was successfully created.') }
+        format.html { redirect_to(@event, notice: t('events.created')) }
         format.xml  { render :xml => @event, :status => :created, :location => @event }
       else
         format.html { render :action => "new" }
@@ -75,7 +75,7 @@ class EventsController < ApplicationController
     
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        format.html { redirect_to(@event, :notice => 'Event was successfully updated.') }
+        format.html { redirect_to(@event, notice: t('events.updated')) }
         format.xml  { head :ok }
         format.js { head :ok}
       else
