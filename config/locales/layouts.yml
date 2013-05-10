@@ -1,0 +1,16 @@
+de:
+  layouts:
+    top_navigation:
+      logo: 'mySportevents'
+      user:
+        registration: 'Registrieren'
+        login: 'Login'
+        logout: 'Logout'
+        account: 'Einstellungen'
+    sub_navigation:
+      dashboard: 'Übersicht'
+      members: 'Mitglieder'
+      calendar: 'Kalender'
+      events: 'Events'
+      forem: 'Forum'
+      galerie: 'Galerie'

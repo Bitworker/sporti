@@ -2,19 +2,19 @@
   .centering
     = link_to (signed_in? ? main_app.dashboard_path : main_app.root_path), :class => 'logo' do
       %p
-        mySportevents
+        = t('layouts.top_navigation.logo')
     - if user_signed_in?
       = link_to main_app.destroy_user_session_path, :method => :delete, :class => 'submenu first' do
         %p
-          Logout
+          = t('layouts.top_navigation.user.logout')
       = link_to main_app.account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
         %p
-          Einstellungen
+          = t('layouts.top_navigation.account')
     - else
       = link_to main_app.new_user_session_path, :class => 'submenu first' do
         %p
-          Login
+          = t('layouts.top_navigation.user.login')
       = link_to main_app.new_user_registration_path, :class => 'submenu' do
         %p
-          Registrieren
+          = t('layouts.top_navigation.user.registration')
           
