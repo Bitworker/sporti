@@ -1,4 +1,13 @@
 de:
   account:
+    title:
+      edit: 'Konto bearbeiten'
+      show: 'Konto'
     information:
       saved: 'Deine Kontoinformationen wurden gespeichert'
+      submit: 'Speichern'
+      edit: 'Bearbeiten'
+      email: 'E-Mail:'
+      first_name: 'Vorname:'
+      last_name: 'Nachname:'
+      avatar: 'Avatar:'

@@ -1,26 +1,26 @@
-- title "Konto"
+- title t('account.title.show')
 
-= link_to "ändern", edit_account_path
+= link_to t('account.information.edit'), edit_account_path
 
 %br
 %b
-  Email:
+  = t('account.information.email')
 = @user.email
 
 %br
 %b
-  Vorname:
+  = t('account.information.first_name')
 = @user.first_name
 
 %br
 %b
-  Nachname:
+  = t('account.information.last_name')
 = @user.last_name
 
 %br
 %br
 %b
-  Avatar:
+  = t('account.information.avatar')
 %br
 - if @user.avatar_url(:normal).present? 
   = image_tag @user.avatar_url(:normal)
