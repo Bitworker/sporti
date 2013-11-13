@@ -1,49 +1,46 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
-gem 'rack', '1.4.5' # Because of "Server already started" error
+gem "rails", "~> 4.0.0"
+gem "rack", "~> 1.5.2"
 
 # Database
 gem 'mysql2', '0.3.11'
 
 # Tempate engine
-gem 'haml', '4.0.2'
-gem 'haml-rails', '0.4' # Creates .haml files on rails generate
-gem "html2haml", '1.0.1'
+gem "haml", "~> 4.0.3"
+gem "haml-rails", "~> 0.4" # Creates .haml files on rails generate
+gem "html2haml", "~> 1.0.1"
 
 # Forum engine
-gem 'forem', :git => 'git://github.com/radar/forem.git'
+gem "forem", "~> 0.0.1"
 
 # Pagination
 gem 'kaminari', '0.13.0'
 
 # Image Uploading
-gem 'rmagick', '2.13.1'
+gem "mini_magick", "~> 3.5.0"
 gem 'carrierwave', '0.8.0'
 
 # Usermanagement
-gem 'devise', '2.2.3'
+gem "devise", "~> 3.0.0.rc"
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem "sass-rails", "~> 4.0.0"
+gem "coffee-rails", "~> 4.0.0"
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem "therubyracer", "~> 0.11.4", :platforms => :ruby # Doesn't get installed at windows
+gem "uglifier", "~> 2.1.1"
 
 # JS Engine
-gem 'jquery-rails', '2.2.1'
+gem "jquery-rails", "~> 3.0.1"
 
 # Debugging
 # bundle install --without debug
 group :debug do
-  gem "better_errors", '0.8.0'
-  gem "binding_of_caller", '0.7.1'
+  gem "better_errors", "~> 0.9.0"
+  gem "binding_of_caller", "~> 0.7.2"
 end
 
 # To use ActiveModel has_secure_password
