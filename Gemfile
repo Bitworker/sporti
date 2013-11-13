@@ -11,9 +11,6 @@ gem 'haml',       '4.1.0.alpha.2'
 gem 'haml-rails', '0.4'              # Creates .haml files on rails generate
 gem 'html2haml',  '1.0.1'
 
-# Forum engine
-gem 'forem', '0.0.1'
-
 # Pagination
 gem 'kaminari', '0.14.1'
 

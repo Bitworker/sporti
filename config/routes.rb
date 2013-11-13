@@ -12,13 +12,12 @@ Sporti::Application.routes.draw do
   resources :events
   resources :members
   
-  match 'dashboard'=> 'dashboard#index',     :as => :dashboard
-  match 'gallerie'  => 'galerie#index',      :as => :galerie
-  match 'kalendar' => 'calendar#index',      :as => :calendar
-  match ''         => 'extern_pages#show',   :as => :root
-  match 'preise'  => 'extern_pages#pricing', :as => :pricing
-  
-  mount Forem::Engine, :at => "/"
+  match 'dashboard' => 'dashboard#index',      :as => :dashboard
+  match 'gallerie'  => 'galerie#index',        :as => :galerie
+  match 'kalendar'  => 'calendar#index',       :as => :calendar
+  match 'forum'     => 'forum#index',          :as => :forum
+  match ''          => 'extern_pages#show',    :as => :root
+  match 'preise'    => 'extern_pages#pricing', :as => :pricing
   
   match ':controller(/:action(/:id))(.:format)'
 
