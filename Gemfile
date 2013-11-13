@@ -1,40 +1,40 @@
 source 'https://rubygems.org'
 
-gem "rails", "~> 4.0.0"
-gem "rack", "~> 1.5.2"
+gem 'rails', '3.2.15'
+gem 'rack',  '1.4.5'
 
 # Database
-gem 'mysql2', '0.3.11'
+gem 'mysql2', '0.3.13'
 
 # Tempate engine
-gem "haml", "~> 4.0.3"
-gem "haml-rails", "~> 0.4" # Creates .haml files on rails generate
-gem "html2haml", "~> 1.0.1"
+gem 'haml',       '4.1.0.alpha.2'
+gem 'haml-rails', '0.4'              # Creates .haml files on rails generate
+gem 'html2haml',  '1.0.1'
 
 # Forum engine
-gem "forem", "~> 0.0.1"
+gem 'forem', '0.0.1'
 
 # Pagination
-gem 'kaminari', '0.13.0'
+gem 'kaminari', '0.14.1'
 
 # Image Uploading
-gem "mini_magick", "~> 3.5.0"
-gem 'carrierwave', '0.8.0'
+gem 'mini_magick', '3.5.0'
+gem 'carrierwave', '0.9.0'
 
-# Usermanagement
-gem "devise", "~> 3.0.0.rc"
+# Authentification
+gem 'devise', '3.2.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem "sass-rails", "~> 4.0.0"
-gem "coffee-rails", "~> 4.0.0"
+gem 'sass-rails',   '3.2.6'
+gem 'coffee-rails', '3.2.2'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem "therubyracer", "~> 0.11.4", :platforms => :ruby # Doesn't get installed at windows
-gem "uglifier", "~> 2.1.1"
+gem 'therubyracer', '0.11.4', :platforms => :ruby # Doesn't get installed at windows
+gem 'uglifier',     '2.3.1'
 
 # JS Engine
-gem "jquery-rails", "~> 3.0.1"
+gem 'jquery-rails'
 
 # Debugging
 # bundle install --without debug
