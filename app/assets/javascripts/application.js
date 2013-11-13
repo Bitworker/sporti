@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   // Closing of notifications
   $('.flash .close').each(function() {
-  	$(this).parents('.flash').delay(10000).slideUp(400);
+  	$(this).parents('.flash').delay(10000).hide();
 
   	$(this).click(function() {
       $(this).parents('.flash').hide();
