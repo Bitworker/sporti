@@ -4,14 +4,14 @@
       %p
         = t('layouts.top_navigation.logo')
     - if user_signed_in?
-      = link_to main_app.destroy_user_session_path, :method => :delete, :class => 'submenu first' do
+      = link_to main_app.destroy_user_session_path, :method => :delete, :class => 'submenu' do
         %p
           = t('layouts.top_navigation.user.logout')
       = link_to main_app.account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
         %p
           = t('layouts.top_navigation.account')
     - else
-      = link_to main_app.new_user_session_path, :class => 'submenu first' do
+      = link_to main_app.new_user_session_path, :class => 'submenu' do
         %p
           = t('layouts.top_navigation.user.login')
       = link_to main_app.new_user_registration_path, :class => 'submenu' do

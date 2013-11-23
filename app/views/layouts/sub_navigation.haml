@@ -1,6 +1,6 @@
 .sub-nav
   .centering
-    = link_to dashboard_path, { :class => "subsubmenu first #{is_active_link?("dashboard")}" } do
+    = link_to dashboard_path, { :class => "subsubmenu #{is_active_link?("dashboard")}" } do
       %p
         = t('layouts.sub_navigation.dashboard')
     = link_to members_path, :class => "subsubmenu #{is_active_link?("members")}" do

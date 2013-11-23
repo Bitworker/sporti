@@ -21,12 +21,6 @@ $.ajaxSetup({
 });
 
 $(document).ready(function() {
-
-  // Position of sub-navigation elements
-  submenu_amount = $('.sub-nav .centering a').size();
-  width = ((960 - ((submenu_amount * 100) + ((submenu_amount - 1) * 5))) / 2) - 10;
-  $('.sub-nav .centering').css('margin-left', width);
-
   // Closing of notifications
   $('.flash .close').each(function() {
   	$(this).parents('.flash').delay(10000).hide();
