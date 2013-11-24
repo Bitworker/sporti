@@ -1,20 +1,24 @@
 .sub-nav
   .centering
-    = link_to dashboard_path, { :class => "subsubmenu #{is_active_link?("dashboard")}" } do
-      %p
-        = t('layouts.sub_navigation.dashboard')
-    = link_to members_path, :class => "subsubmenu #{is_active_link?("members")}" do
-      %p
-        = t('layouts.sub_navigation.members')
-    = link_to calendar_path, :class => "subsubmenu #{is_active_link?("calendar")}" do
-      %p
-        = t('layouts.sub_navigation.calendar')
-    = link_to events_path, :class => "subsubmenu #{is_active_link?("events")}" do
-      %p
-        Events
+
+
+
+
     = link_to forum_path, :class => "subsubmenu #{is_active_link?("forum")}" do
       %p
         = t('layouts.sub_navigation.forum')
     = link_to galerie_path, :class => "subsubmenu #{is_active_link?("galerie")}" do
       %p
         = t('layouts.sub_navigation.galerie')
+    = link_to calendar_path, :class => "subsubmenu #{is_active_link?("calendar")}" do
+      %p
+        = t('layouts.sub_navigation.calendar')
+    = link_to events_path, :class => "subsubmenu #{is_active_link?("events")}" do
+      %p
+        = t('layouts.sub_navigation.events')
+    = link_to members_path, :class => "subsubmenu #{is_active_link?("members")}" do
+      %p
+        = t('layouts.sub_navigation.members')
+    = link_to dashboard_path, { :class => "subsubmenu #{is_active_link?("dashboard")}" } do
+      %p
+        = t('layouts.sub_navigation.dashboard')

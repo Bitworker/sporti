@@ -2,11 +2,10 @@ de:
   layouts:
     top_navigation:
       logo: 'mySportevents'
-      user:
-        registration: 'Registrieren'
-        login: 'Login'
-        logout: 'Logout'
-        account: 'Einstellungen'
+      registration: 'Registrieren'
+      login: 'Login'
+      logout: 'Logout'
+      account: 'Konto'
     sub_navigation:
       dashboard: 'Übersicht'
       members: 'Mitglieder'
