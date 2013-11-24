@@ -1,10 +1,14 @@
-- title "Die Abos..."
+- title "Die Abos"
 
-abo 1
-%br
-abo 2
-%br
-abo 3
-%br
+.row
+  .column.grid-2
 
-Orderflow -->
+- @plans.each do |plan|
+  .row
+    .column.grid-2
+      = plan.title
+      .price
+        = number_to_currency(plan.price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
+
+.row
+  .column.grid-2

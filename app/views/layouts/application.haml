@@ -14,12 +14,10 @@
       = render :template => "layouts/title_navigation"
       .main-content-intern
         = render :template => "layouts/notifications"
-        .content-box
-          = yield
+        = yield
       = render :template => "layouts/footer"
     - else
       .main-content-extern
         = render :template => "layouts/notifications"
-        .content-box
-          = yield
+        = yield
       = render :template => "layouts/footer"
