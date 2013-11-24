@@ -11,12 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130508160742) do
+ActiveRecord::Schema.define(:version => 20131124150224) do
+
+  create_table "account_subscription_plans", :force => true do |t|
+    t.string   "title",                          :null => false
+    t.integer  "price",                          :null => false
+    t.integer  "group_amount",                   :null => false
+    t.integer  "group_size",                     :null => false
+    t.boolean  "available",    :default => true, :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "account_subscriptions", :force => true do |t|
+    t.integer  "user_id",                      :null => false
+    t.integer  "account_subscription_plan_id", :null => false
+    t.date     "start_date",                   :null => false
+    t.date     "end_date",                     :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
 
   create_table "events", :force => true do |t|
-    t.string   "title"
-    t.datetime "starts_at"
-    t.datetime "ends_at"
+    t.string   "title",       :null => false
+    t.datetime "starts_at",   :null => false
+    t.datetime "ends_at",     :null => false
     t.boolean  "all_day"
     t.text     "description"
     t.datetime "created_at",  :null => false
@@ -24,17 +43,25 @@ ActiveRecord::Schema.define(:version => 20130508160742) do
   end
 
   create_table "groups", :force => true do |t|
+    t.string   "title"
     t.string   "auth_hash"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  create_table "usergroups", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "group_id",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
-    t.integer  "group_id"
     t.string   "email",                  :default => "", :null => false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
+    t.boolean  "owner"
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

@@ -2,7 +2,10 @@ class User < ActiveRecord::Base
   # Carrierwave Avatar Uploader
   mount_uploader :avatar, AvatarUploader 
   
-  belongs_to :group
+  has_many :user_groups
+  has_many :groups, :through => :user_groups
+  
+  has_many :account_subscriptions
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
