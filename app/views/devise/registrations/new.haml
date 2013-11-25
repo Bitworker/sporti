@@ -13,9 +13,5 @@
     = f.label :password_confirmation, "Passwort bestätigen"
     %br
     = f.password_field :password_confirmation
-  %div
-    = label_tag :auth_hash, "Gruppen ID"
-    %br
-    = text_field_tag :auth_hash
   %div= f.submit "Registrieren"
 = render "devise/shared/links"

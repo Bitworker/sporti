@@ -15,9 +15,10 @@ ActiveRecord::Schema.define(:version => 20131124150224) do
 
   create_table "account_subscription_plans", :force => true do |t|
     t.string   "title",                          :null => false
-    t.integer  "price",                          :null => false
     t.integer  "group_amount",                   :null => false
     t.integer  "group_size",                     :null => false
+    t.integer  "month_amount",                   :null => false
+    t.integer  "month_price",                    :null => false
     t.boolean  "available",    :default => true, :null => false
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
