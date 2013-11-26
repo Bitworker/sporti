@@ -9,6 +9,7 @@ Sporti::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   
   resources :account
+  resources :account_subscription
   resources :events
   resources :members
   

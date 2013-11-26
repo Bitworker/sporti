@@ -1,20 +1,20 @@
 .top-nav
   .centering
-    = link_to (signed_in? ? main_app.dashboard_path : main_app.root_path), :class => 'logo' do
+    = link_to (signed_in? ? dashboard_path : root_path), :class => 'logo' do
       %p
         = t('layouts.top_navigation.logo')
     - if user_signed_in?
-      = link_to main_app.account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
+      = link_to account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
         %p
           = t('layouts.top_navigation.account')
-      = link_to main_app.destroy_user_session_path, :method => :delete, :class => 'submenu' do
+      = link_to destroy_user_session_path, :method => :delete, :class => 'submenu' do
         %p
           = t('layouts.top_navigation.logout')
     - else
-      = link_to main_app.new_user_session_path, :class => 'submenu' do
+      = link_to new_user_session_path, :class => 'submenu' do
         %p
           = t('layouts.top_navigation.login')
-      = link_to main_app.new_user_registration_path, :class => 'submenu' do
+      = link_to pricing_path, :class => 'submenu' do
         %p
-          = t('layouts.top_navigation.registration')
+          = t('layouts.top_navigation.pricing')
           

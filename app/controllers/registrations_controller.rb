@@ -1,8 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :find_account_subscription_plan
+  before_filter :find_account_subscription_plan,    :only => [:new, :create]
   
-  prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
-  prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
+  prepend_before_filter :require_no_authentication, :only => [:new,  :create, :cancel]
+  prepend_before_filter :authenticate_scope!,       :only => [:edit, :update, :destroy]
   
   # GET /resource/sign_up
   def new
@@ -23,7 +23,11 @@ class RegistrationsController < Devise::RegistrationsController
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_flashing_format?
         sign_up(resource_name, resource)
-        respond_with resource, :location => after_sign_up_path_for(resource)
+        if @account_subscription_plan.free?
+          respond_with resource, :location => after_sign_up_path_for(resource)
+        else
+          respond_with resource, :location => new_account_subscription_path(:plan => @account_subscription_plan)
+        end
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
         expire_data_after_sign_in!

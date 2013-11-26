@@ -12,9 +12,9 @@
           .price
             = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
           - if plan.month_price == 0
-            = link_to 'Testen', new_user_registration_path(:plan => plan.id), :class => 'button'
+            = link_to 'Testen', new_user_registration_path(:plan => plan), :class => 'button'
           - else
-            = link_to 'Kaufen', new_user_registration_path(:plan => plan.id), :class => 'button'
+            = link_to 'Kaufen', new_user_registration_path(:plan => plan), :class => 'button'
   
   .row
     .column.grid-2

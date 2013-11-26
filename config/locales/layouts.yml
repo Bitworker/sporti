@@ -2,7 +2,7 @@ de:
   layouts:
     top_navigation:
       logo: 'mySportevents'
-      registration: 'Registrieren'
+      pricing: 'Kostenlos testen'
       login: 'Login'
       logout: 'Logout'
       account: 'Konto'
