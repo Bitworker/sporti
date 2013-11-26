@@ -6,7 +6,7 @@
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{ :id => params[:controller].parameterize + "-controller" }
+  %body{ :class => controller_name.dasherize + "-controller" }
     
     = render :template => "layouts/top_navigation"
     - if user_signed_in?
