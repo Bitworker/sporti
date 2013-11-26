@@ -1,0 +1,10 @@
+- plan = @account_subscription_plan
+- title "Abo: #{plan.title}"
+
+.page
+  .row
+    .column.grid-8
+  
+  .row
+    .column.grid-4
+      = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
