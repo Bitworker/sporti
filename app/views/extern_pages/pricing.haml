@@ -1,18 +1,20 @@
 - title "Die Abos"
 
-.row
-  .column.grid-2
-
-- @plans.each do |plan|
+.pricing
   .row
     .column.grid-2
-      = plan.title
-      .price
-        = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
-      - if plan.month_price == 0
-        = link_to 'Testen', new_user_registration_path(:plan => plan.id), :class => 'button'
-      - else
-        = link_to 'Kaufen', new_user_registration_path(:plan => plan.id), :class => 'button'
-
-.row
-  .column.grid-2
+  
+  - @plans.each do |plan|
+    .row
+      .column.grid-2
+        .plan
+          = plan.title
+          .price
+            = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
+          - if plan.month_price == 0
+            = link_to 'Testen', new_user_registration_path(:plan => plan.id), :class => 'button'
+          - else
+            = link_to 'Kaufen', new_user_registration_path(:plan => plan.id), :class => 'button'
+  
+  .row
+    .column.grid-2
