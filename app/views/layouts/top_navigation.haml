@@ -7,6 +7,9 @@
       = link_to account_path(current_user), :class => "submenu #{is_active_link?("account")}" do
         %p
           = t('layouts.top_navigation.account')
+      = link_to new_account_subscription_path, :class => "submenu #{is_active_link?("account_subscription")}" do
+        %p
+          = t('layouts.top_navigation.abos')
       = link_to destroy_user_session_path, :method => :delete, :class => 'submenu' do
         %p
           = t('layouts.top_navigation.logout')

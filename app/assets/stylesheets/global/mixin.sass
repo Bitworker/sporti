@@ -1,12 +1,12 @@
 // Font
 
-//Usage: @include font-face('Berlin Sans FB Demi','BRLNSDB', normal (optional), bold (optional));
-@mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal)
+//FIXME: Not working correct
+//Usage: @include declare-font-face('Berlin Sans FB Demi','BRLNSDB', normal (optional), bold (optional), normal (optional));
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal)
   @font-face
-  font-family: '#{$fontname}'
-  src: url('fonts/#{$filename}.eot')
-  src: url('fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), url('img/fonts/#{$filename}.woff') format('woff'), url('img/fonts/#{$filename}.ttf') format('truetype'), url('img/fonts/#{$filename}.svg##{$filename}') format('svg')
-    //svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
-
-  font-style: $fontstyle
-  font-weight: $fontweight
+    font-family: '#{$font-family}'
+    src: url(font-path('#{$font-filename}.eot'))
+    src: url(font-path('#{$font-filename}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$font-filename}.woff')) format('woff'), url(font-path('#{$font-filename}.ttf')) format('truetype'), url(font-path('#{$font-filename}.svg##{$font-family}')) format('svg')
+    font-weight: $font-weight
+    font-style: $font-style
+    font-stretch: $font-stretch

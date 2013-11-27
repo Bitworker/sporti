@@ -3,6 +3,7 @@ de:
     top_navigation:
       logo: 'mySportevents'
       pricing: 'Kostenlos testen'
+      abos: 'Abos'
       login: 'Login'
       logout: 'Logout'
       account: 'Konto'
