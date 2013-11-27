@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var m = date.getMonth();
 	var y = date.getFullYear();
 	
-	$('#calendar').fullCalendar({
+	$('#calendar').one().fullCalendar({
 		editable: true,        
 		header: {
             left: 'prev,next today',
