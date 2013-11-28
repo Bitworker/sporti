@@ -1,5 +1,7 @@
 - flash.each do |name, msg|
   %div{:class => "flash #{name}"}
-    %p
-      = msg
-    %a.close{:href => "#"}
+    .centering
+      %p
+        = msg
+        %a{:href => "#"}
+          = t "general.flash.close"

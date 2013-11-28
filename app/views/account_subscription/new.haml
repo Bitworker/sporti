@@ -1,10 +1,24 @@
-- plan = @account_subscription_plan
+- plan        = @account_subscription_plan
+- other_plans = @other_account_subscription_plans
 - title "Abo: #{plan.title}"
 
 .page
   .row
     .column.grid-8
+      .plan
+        = plan.title
+        .price
+          = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
+        = form_for @account_subscription, url: {action: "create"} do |form|
+          = hidden_field_tag :plan, plan.id
+          = form.submit 'Kaufen', :class => 'button'
   
   .row
     .column.grid-4
-      = number_to_currency(plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
+      - other_plans.each do |other_plan|
+        .column.grid-4
+          .other-plan
+            = other_plan.title
+            .price
+              = number_to_currency(other_plan.month_price.to_f / 100, :unit => " €", :precision => 2, :separator => ",")
+            = link_to 'Details', new_account_subscription_path(:plan => other_plan), :class => 'button'
