@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var m = date.getMonth();
 	var y = date.getFullYear();
 	
-	$('#calendar').one().fullCalendar({
+	$('#calendar').fullCalendar({
 		editable: true,        
 		header: {
             left: 'prev,next today',
@@ -26,7 +26,7 @@ $(document).ready(function() {
         // a future calendar might have many sources.        
         eventSources: [{
             url: '/events',
-            color: 'green',
+            color: '#7BCC70',
             textColor: 'black',
             ignoreTimezone: false
         }],
