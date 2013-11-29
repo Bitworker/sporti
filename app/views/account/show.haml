@@ -1,28 +1,35 @@
 - title t('account.title.show')
 
-= link_to t('account.information.edit'), edit_account_path
+= link_to t('account.edit'), edit_account_path
+%br
+%br
 
-%br
-%b
-  = t('account.information.email')
-= @user.email
-
-%br
-%b
-  = t('account.information.first_name')
-= @user.first_name
-
-%br
-%b
-  = t('account.information.last_name')
-= @user.last_name
-
-%br
-%br
-%b
-  = t('account.information.avatar')
-%br
-- if @user.avatar_url(:normal).present? 
-  = image_tag @user.avatar_url(:normal)
-- else
-  = image_tag("default_avatar_m.png")
+.row
+  .column.grid-6
+    %h2.headline
+      = t('account.headlines.profil')
+    
+    = t('account.profile.email')
+    = @user.email
+    %br
+    = t('account.profile.first_name')
+    = @user.first_name
+    %br
+    = t('account.profile.last_name')
+    = @user.last_name
+    %br
+    = t('account.profile.avatar')
+    %br
+    - if @user.avatar_url(:normal).present? 
+      = image_tag @user.avatar_url(:normal)
+    - else
+      = image_tag("default_avatar_m.png")
+  
+  .column.grid-6
+    %h2.headline
+      = t('account.headlines.groups')
+    
+    - @user.groups.each_with_index do |group, i|
+      = t("account.groups.title#{i+1}")
+      = group.title
+      %br

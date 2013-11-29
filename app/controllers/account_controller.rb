@@ -15,7 +15,7 @@ class AccountController < ApplicationController
     
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to account_path(@user), notice: t('account.information.saved') }
+        format.html { redirect_to account_path(@user), notice: t('account.profile.saved') }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

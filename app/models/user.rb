@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   
   has_many :user_groups
   has_many :groups, :through => :user_groups
+
+  accepts_nested_attributes_for :groups
   
   has_many :account_subscriptions
   
@@ -14,6 +16,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :avatar
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :avatar, :groups_attributes
   # attr_accessible :title, :body
 end

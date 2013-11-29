@@ -3,11 +3,18 @@ de:
     title:
       edit: 'Konto bearbeiten'
       show: 'Konto'
-    information:
+    edit: 'Bearbeiten'
+    submit: 'Speichern'
+    profile:
       saved: 'Deine Kontoinformationen wurden gespeichert'
-      submit: 'Speichern'
-      edit: 'Bearbeiten'
       email: 'E-Mail:'
       first_name: 'Vorname:'
       last_name: 'Nachname:'
       avatar: 'Avatar:'
+    groups:
+      title1: 'Gruppe 1:'
+      title2: 'Gruppe 2:'
+      title3: 'Gruppe 3:'
+    headlines:
+      profil: 'Profil'
+      groups: 'Gruppen'
