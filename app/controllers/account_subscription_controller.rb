@@ -17,6 +17,13 @@ class AccountSubscriptionController < ApplicationController
       @account_subscription.end_date                     = Time.current.to_date.months_since(@plan.month_amount)
       
       if @account_subscription.save
+        # Setup placeholder groups based on plan group amount
+        (1..@plan.group_amount).each do |i|
+          current_user.groups.create(:title => "Gruppe #{i}")
+        end
+        
+        current_user.update_attribute :owner, true
+        
         flash[:notice] = t('account_subscription.created', :plan_title => @plan.title) 
         redirect_to dashboard_path
       else

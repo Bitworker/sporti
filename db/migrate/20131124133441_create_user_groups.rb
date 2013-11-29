@@ -1,6 +1,6 @@
 class CreateUserGroups < ActiveRecord::Migration
   def change
-    create_table :usergroups do |t|
+    create_table :user_groups, id: false do |t|
       t.integer :user_id,  :null => false
       t.integer :group_id, :null => false
       
